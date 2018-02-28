@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build-dev",
-    "build-dev": "webpack -d && webpack-dev-server --content-base dist --inline",
+    "build-dev": "webpack -d && webpack-dev-server --content-base dist --inline --hot",
     "build-prod": "webpack -p && webpack-dev-server --content-base dist --inline"
   },
   "author": "",
