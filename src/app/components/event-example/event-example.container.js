@@ -11,6 +11,7 @@ export class EventExample extends React.Component {
     }
 
     setDynamicTitle = (title, e) => {
+        console.log(e);
         this.setState({
             currentTitle: title
         });
@@ -30,6 +31,7 @@ export class EventExample extends React.Component {
                 <br />
                 <button onClick={this.setStaticTitle} >Set Static Text</button>
                 <button onClick={e => this.setDynamicTitle('Dynamic Text', e)} >Set Dynamic Text</button>
+                {/* <button onClick={this.setDynamicTitle.bind(this, 'Dynamic Text')} >Set Dynamic Text</button> */}
                 <button onClick={e => this.props.setParentTitle('To Parent from Child componet', e)} >Pass Data To Parent</button>
             </div>
         )
