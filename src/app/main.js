@@ -1,7 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { DateTime } from './components/date-time/date-time.container';
-import { EventExample } from './components/event-example/event-example.container';
+// import { DateTime } from './components/date-time/date-time.container';
+// import { EventExample } from './components/event-example/event-example.container';
+import { UserManagementContainer } from './components/user-management/user-management.container';
+
 
 export class App extends React.Component {
 
@@ -21,8 +23,7 @@ export class App extends React.Component {
     render() {
         return (
             <div>
-                <DateTime />
-                <EventExample setParentTitle={this.setTitle} parentTitle={this.state.parentTitle} />
+                <UserManagementContainer />
             </div>
         )
     }

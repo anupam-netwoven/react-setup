@@ -21,6 +21,6 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({ hash: true, template: './src/index.html' }),
-        new CleanWebpackPlugin(['dist'])
+        //new CleanWebpackPlugin(['dist'])
     ],
 };
