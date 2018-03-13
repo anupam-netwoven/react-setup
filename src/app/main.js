@@ -1,32 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
-// import { DateTime } from './components/date-time/date-time.container';
-// import { EventExample } from './components/event-example/event-example.container';
-import { UserManagementContainer } from './components/user-management/user-management.container';
+import { Provider } from "react-redux";
+import { AppContainer } from "./containers/app-container";
+import store from "./store";
 
+const app = (
+    <Provider store={store}>
+        <AppContainer />
+    </Provider>
+);
 
-export class App extends React.Component {
-
-    constructor() {
-        super();
-        this.state = {
-            parentTitle: 'Title from parent'
-        };
-    }
-
-    setTitle = (title, e) => {
-        this.setState({
-            parentTitle: title
-        })
-    }
-
-    render() {
-        return (
-            <div>
-                <UserManagementContainer />
-            </div>
-        )
-    }
-}
-
-render(<App />, document.getElementById('app'));
+render(app, document.getElementById("app"));

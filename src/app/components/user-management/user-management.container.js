@@ -15,15 +15,16 @@ export class UserManagementContainer extends React.Component {
     }
 
     addUser = () => {
-        debugger;
         let raw = randomstring.generate({
             length: 10,
             charset: 'alphabetic'
         });
         let newUserName = raw.substring(0, 1).toUpperCase() + raw.substring(1, raw.length).toLocaleLowerCase();
-        this.setState({
-            users: [...this.state.users, { name: newUserName, age: 65 }]
-        })
+        // this.setState({
+        //     users: [...this.state.users, { name: newUserName, age: 65 }]
+        // })
+
+        this.props.addUser({ name: newUserName, age: 65 });
     }
 
     render() {
@@ -32,7 +33,10 @@ export class UserManagementContainer extends React.Component {
                 <button onClick={this.addUser}>Add</button>
                 <ul>
                     {
-                        this.state.users.map((item, index) => {
+                        // this.state.users.map((item, index) => {
+                        //     return <li>{item.name}</li>
+                        // })
+                        this.props.users.map((item, index) => {
                             return <li>{item.name}</li>
                         })
                     }
