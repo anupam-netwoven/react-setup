@@ -4,17 +4,17 @@ import randomstring from 'randomstring';
 
 export class UserManagementContainer extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            users: [
-                { name: 'Al Pacino', age: 70 },
-                { name: 'Robert De Niro', age: 72 },
-            ]
-        };
-    }
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         users: [
+    //             { name: 'Al Pacino', age: 70 },
+    //             { name: 'Robert De Niro', age: 72 },
+    //         ]
+    //     };
+    // }
 
-    addUser = () => {
+    add = () => {
         let raw = randomstring.generate({
             length: 10,
             charset: 'alphabetic'
@@ -29,7 +29,7 @@ export class UserManagementContainer extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.addUser}>Add</button>
+                <button onClick={this.add}>Add</button>
                 <ul>
                     {
                         // this.state.users.map((item, index) => {

@@ -5,10 +5,9 @@ import { LayoutContainer } from "./layout-container";
 
 
 function mapStateToProps(state) {
-    debugger;
     return {
         users: state.userManagementReducer,
-        products: []
+        products: state.productManagementReducer
     }
 }
 
@@ -22,7 +21,7 @@ function mapDispatchToProps(dispatch) {
             dispatch({ type: 'ADD_USER', payload: payload })
         },
         addProduct: (payload) => {
-            dispatch({ type: 'ADD_PRODUCT', payload: {} })
+            dispatch({ type: 'ADD_PRODUCT', payload: payload })
         }
     }
 }
