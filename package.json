@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build-dev",
-    "build-dev": "webpack && webpack-dev-server --content-base dist --inline --hot",
-    "build-prod": "webpack -p && webpack-dev-server --content-base dist --inline"
+    "build-dev": "webpack --mode development && webpack-dev-server --content-base dist --inline --hot",
+    "build-prod": "webpack --mode development && webpack-dev-server --content-base dist --inline"
   },
   "author": "",
   "license": "ISC",

@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { userManagementReducer } from './user-management-reducer';
+import userManagementReducer from './user-management-reducer';
 
 const rootReducer = combineReducers({
     userManagementReducer

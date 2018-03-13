@@ -16,10 +16,6 @@ export class LayoutContainer extends React.Component {
     //     })
     // }
 
-    componentWillMount() {
-        console.log(this.props);
-    }
-
     render() {
         return (
             <div>

@@ -23,7 +23,6 @@ export class UserManagementContainer extends React.Component {
         // this.setState({
         //     users: [...this.state.users, { name: newUserName, age: 65 }]
         // })
-
         this.props.addUser({ name: newUserName, age: 65 });
     }
 

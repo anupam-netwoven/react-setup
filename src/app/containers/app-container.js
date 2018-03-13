@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import { LayoutContainer } from "./layout-container";
 
 
-const mapStateToProps = (state) => {
-    console.log(state);
+function mapStateToProps(state) {
+    debugger;
     return {
         users: state.userManagementReducer,
         products: []
@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
 //     return bindActionCreators(actionCreators, dispatch);
 // }
 
-const mapDispatchToProps = (dispatch) => {
+function mapDispatchToProps(dispatch) {
     return {
         addUser: (payload) => {
             dispatch({ type: 'ADD_USER', payload: payload })
